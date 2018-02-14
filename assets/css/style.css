@@ -1,0 +1,12 @@
+body {
+    background: url(../images/background-photo.jpg);
+}
+
+
+#masthead {
+    color: 	#D3D3D3;
+    text-align: center;
+    height: 70px;
+    border-bottom: 1px solid grey;
+    background-color: #483D8B;   
+}

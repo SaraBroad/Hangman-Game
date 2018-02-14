@@ -2,15 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hangman Game
-    </title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Hangman Game</title>
 </head>
 <body>
-<h1>Welcome to the Hangman Art Game<h1>
-<h2>Press any key to get started!<h2>    
 
+    <header id="masthead">
+        <div class="container">
+            <h1>The Hangman Game</h1>
+        </div>
+    </header>
+
+    <div id="main-container">
+
+<h2>Press any key to get started!<h2>    
+<p id="wins"></p>
+<div id="chances"></div>
+<p id="just-guessed"></p>
+<div id="name"></div>
+
+</div>
+
+<script type="text/javascript">
+
+
+
+var photographers = ["steichen", "bresson", "eggleston", "evans", "arbus"];
+
+// var win = 0;
+// var guesses = 12;
+// var steichen = [" ", " ", " ", " ", " ", " ", " ", " "];
+
+// //need function to update score, function to start game at key touch
+
+// var computerGuess = photographers[Math.floor(Math.random()*photographers.length)];
+// var randomGuess = computerGuess[i];
+
+    // for (var i = 0; i < photographers.length; i++) {
+    //     var computerGuess = photographers[Math.floor(Math.random()*photographers.length)];
+    //     alert(computerGuess);
+    // }
+
+
+    // document.onkeyup = function (event) {
+    //     
+    // }
+    
+
+
+function nameGenerator () {
+    for (var i = 0; i < photographers.length; i++) {
+        var computerGuess = photographers[Math.floor(Math.random()*photographers.length)];
+    if (computerGuess === photographers[0]) {
+        document.querySelector("#name").innerHTML = ("_ _ _ _ _ _ _ _");
+    } else if (computerGuess === photographers[1]) {
+        document.querySelector("#name").innerHTML ("_ _ _ _ _ _ _");
+    } else if (computerGuess === photographers[2]) {
+        document.querySelector("#name").innerHTML = ("_ _ _ _ _ _ _ _ _");
+    } else if (computerGuess === photographers[3]) {
+        document.querySelector("#name").innerHTML = ("_ _ _ _ _"); }
+         else { 
+            document.querySelector("#name").innerHTML = ("_ _ _ _ _"); }
+}
+}
+
+
+// document.onkeyup = function (event) {
+//     userText.textContent = event.key; 
+
+//     function nameGenerator () {
+//     for (var i = 0; i < photographers.length; i++) 
+//         var computerGuess = photographers[Math.floor(Math.random()*photographers.length)];
+//     if (computerGuess === photographers[0]) {
+//         document.querySelector("#name").innerHTML = ("_ _ _ _ _ _ _ _");
+//     } else if (computerGuess === photographers[1]) {
+//         document.querySelector("#name").innerHTML ("_ _ _ _ _ _ _");
+//     } else if (computerGuess === photographers[2]) {
+//         document.querySelector("#name").innerHTML = ("_ _ _ _ _ _ _ _ _");
+//     } else if (computerGuess === photographers[3]) {
+//         document.querySelector("#name").innerHTML = ("_ _ _ _ _"); }
+//          else { 
+//             document.querySelector("#name").innerHTML = ("_ _ _ _ _"); }
+// }
+
+
+
+
+
+
+
+// }
+    
+// }
+
+// for (var i = 0; i<photographs.length; i++) {
+
+// if computerGuess === photographers[1] {
+//     if ((userGuess === s) || || (userGuess === e) || (userGuess === i) || (userGuess === c) || (userGuess === e) || (userGuess === n)) {
+//         userGuess.push(steichen[0]) && guesses--;
+//     } else if (userGuess === t){
+//         userGuess.push(steichen[1]) && guesses-- && document.querySelector(userGuess).innerHTML;
+//     } else if (userGuess === e) {
+//         userGuess.push(steichen[2][6]) && guesses--;
+//     } else if (userGuess === i) {
+//         userGuess.push(steichen[3]) && guesses--;
+//     } else if (userGuess === c) {
+//         userGuess.push(steichen[4]) && guesses--;
+//     } else if (userGuess === h) {
+//         userGuess.push(steichen[5]) && guesses--;
+//     } else if (userGuess === n) {
+//         userGuess.push(steichen[7]) && guesses--;
+//      } else {
+//          guesses-- && document.getElementById("demo1").innerHTML = userGuess;
+//      }
+//     }
+// }
+
+// or if letter is in the index of the word
+
+
+//         guesses-- && document.querySelector("chances").innerHTML = " ";
+
+//         document.querySelector("computerGuess").innerHTML = "Guess the " + photographers + " to win."
+
+// </script>
 
 </body>
 </html>
