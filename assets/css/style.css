@@ -7,6 +7,25 @@ body {
     color: 	#D3D3D3;
     text-align: center;
     height: 70px;
-    border-bottom: 1px solid grey;
+    border-bottom: 4px solid grey;
     background-color: #483D8B;   
+}
+
+#main-container {
+    border: 1px solid grey;
+    width: 400px;
+    text-align: center;
+    float: right;
+    margin-right: 40px;
+    height: 400px;
+    margin-top: 40px;
+}
+
+#top-half {
+    border-bottom: 2px dashed black;
+    padding-bottom: 15px;
+}
+
+#guessed {
+    margin-top: 60px;
 }
