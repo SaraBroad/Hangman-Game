@@ -35,7 +35,25 @@
 
     </div>
 
+
+
+
+
     <script type="text/javascript">
+
+
+    var photographers = ["steichen", "bresson", "eggleston", "evans", "arbus"];
+    var win = 0;
+    var guesses = 12;
+    var randomWord;
+    var randomWordChars = [];
+    var guessedLetters = [];
+    // placeholders characters
+    var placeholderChars = [];
+
+    // If the word is madonna, display it like this when the game starts: _ _ _ _ _ _ _.
+    // As the user guesses the correct letters, reveal them: m a d o _  _ a.
+
         // Use key events to listen for the letters that your players will type.
         document.onkeyup = function (event) {
             var userGuess = event.key;
@@ -48,46 +66,25 @@
                 // user guess is incorrect
                 if (randomWordChars.indexOf(userGuess) <= 0) {
                     push();    
-                } else if (guesses === 0) {
-
                 }
                 document.getElementById("guessed").innerHTML = guessedLetters;
                 document.querySelector("#chances-left").innerHTML = (guesses--);           
             }
 
             function push() {
+           
+
                 if (userGuess === "a" || userGuess === "b" || userGuess === "c" || userGuess === "d" || userGuess === "e" || userGuess === "f" || userGuess === "g" || userGuess === "h" || userGuess === "i"
                 || userGuess === "j" || userGuess === "k" || userGuess === "l" || userGuess === "m" || userGuess === "n" || userGuess === "o" || userGuess === "p" || userGuess === "q" || userGuess === "r" || userGuess === "s" || userGuess === "t" || userGuess === "u" || userGuess === "v" || userGuess === "w"
                 || userGuess === "x" || userGuess === "y" || userGuess === "z") {
-                guessedLetters.push(userGuess); 
+                    guessedLetters.push(userGuess); 
                 }
                 document.getElementById("chances-left").innerHTML = ("Letters already guessed: " + guessedLetters);
 
             }
-
-            // // if (computerGuess === photographers[0]) {
-            //     if (userGuess === "s") {
-            // document.querySelector("#steichen").innerHTML = ("s"[0]);
-            //    guesses++;
-            //    
-            //     }
-            // }       
         }
-        var photographers = ["steichen", "bresson", "eggleston", "evans", "arbus"];
-        // Wins
-        var win = 0;
-        // guesses left
-        var guesses = 12;
-        // random word
-        var randomWord;
-        // random word characters
-        var randomWordChars = [];
-        // guessed letters
-        var guessedLetters = [];
-        // placeholders characters
-        var placeholderChars = [];
-        // If the word is madonna, display it like this when the game starts: _ _ _ _ _ _ _.
-        // As the user guesses the correct letters, reveal them: m a d o _  _ a.
+
+       
 
         function startGame() {
             // reset game variables    
@@ -101,7 +98,7 @@
             // get placeholder array
             for (var i = 0; i < randomWordChars.length; i++) {
                 placeholderChars.push("_");
-            }
+            } 
             document.getElementById("current-word").innerHTML = placeholderChars.join(" ");
         }
         
@@ -118,9 +115,16 @@
         function isUserWinner() {
             if (placeholdersChars.indexOf("_") < 0) {
                 return true;
+               
             }
+            if (guesses = 0);
+            startGame();
             return false;
         }
+
+
+
+
         startGame();
  </script>
 
