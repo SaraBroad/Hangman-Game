@@ -18,7 +18,8 @@
     </header>
 
     <div id="main-container">
-            <div id="left"></div>
+
+        <div id="picture-box"></div>
 
         <div id="top-half">
             <h2>Press any key to get started</h2>
@@ -32,7 +33,6 @@
         <h3>Letters already guessed:</h3>
         <div id="guessed"></div>
        
-        <div id="left"></div>
 
     </div>
 
@@ -65,7 +65,9 @@
                 document.querySelector("#chances-left").innerHTML = (guesses--);
             } else {
                 // user guess is incorrect
-                if (randomWordChars.indexOf(userGuess) <= 0) {
+                console.log(guessedLetters, userGuess)
+                console.log(guessedLetters.indexOf(userGuess))
+                if (guessedLetters.indexOf(userGuess) < 0) {
                     push();    
                 }
                 document.getElementById("guessed").innerHTML = guessedLetters;
@@ -73,14 +75,14 @@
             }
 
             function push() {
-                while (guesses > 0) {
+                
                 if (userGuess === "a" || userGuess === "b" || userGuess === "c" || userGuess === "d" || userGuess === "e" || userGuess === "f" || userGuess === "g" || userGuess === "h" || userGuess === "i"
                 || userGuess === "j" || userGuess === "k" || userGuess === "l" || userGuess === "m" || userGuess === "n" || userGuess === "o" || userGuess === "p" || userGuess === "q" || userGuess === "r" || userGuess === "s" || userGuess === "t" || userGuess === "u" || userGuess === "v" || userGuess === "w"
                 || userGuess === "x" || userGuess === "y" || userGuess === "z") {
                     guessedLetters.push(userGuess); 
                 }
                 document.getElementById("chances-left").innerHTML = ("Letters already guessed: " + guessedLetters);
-            }
+            
             }
         }
 
