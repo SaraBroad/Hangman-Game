@@ -13,9 +13,10 @@ body {
 
 #main-container {
     border: 1px solid grey;
+    clear: both;
     width: 400px;
     text-align: center;
-    float: right;
+   margin-left: 600px;
     margin-right: 40px;
     height: 400px;
     margin-top: 40px;
@@ -29,3 +30,4 @@ body {
 #guessed {
     margin-top: 60px;
 }
+
